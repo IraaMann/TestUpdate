@@ -1,9 +1,11 @@
 {
-    "latest_version": "1.1",
-    "download_url": "https://raw.githubusercontent.com/IraaMann/TestUpdate/main/updates/v1.1/main.py",
+    "latest_version": "1.2",
+    "download_url": "https://raw.githubusercontent.com/IraaMann/TestUpdate/main/updates/v1.2/main.py",
     "changelog": [
-        "Added new feature button",
-        "Updated UI design",
+        "Added real-time clock display",
+        "Added animated progress bar",
+        "Added status indicator",
+        "Modern UI redesign",
         "Improved performance"
     ]
 }
