@@ -2,8 +2,8 @@
     "latest_version": "1.1",
     "download_url": "https://raw.githubusercontent.com/IraaMann/TestUpdate/main/updates/v1.1/main.py",
     "changelog": [
-        "Added update checker",
-        "Improved UI",
-        "New features added"
+        "Added new feature button",
+        "Updated UI design",
+        "Improved performance"
     ]
 }
