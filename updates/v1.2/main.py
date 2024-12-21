@@ -130,22 +130,22 @@ class MyApp:
             self.status_label.config(text="Status: Update check failed")
             messagebox.showerror("Error", f"Failed to check for updates: {str(e)}")
 
-    def download_update(self, url):
-        try:
-            self.status_label.config(text="Status: Downloading update...")
-            response = requests.get(url)
-            if response.status_code == 200:
-                with open("main.py", "w", encoding='utf-8') as f:
-                    f.write(response.text)
-                self.status_label.config(text="Status: Update downloaded")
-                messagebox.showinfo("Success", "Update downloaded! Please restart the application.")
-                self.root.quit()
-            else:
-                self.status_label.config(text="Status: Download failed")
-                messagebox.showerror("Error", "Failed to download update")
-        except Exception as e:
-            self.status_label.config(text="Status: Download failed")
-            messagebox.showerror("Error", f"Failed to download update: {str(e)}")
+def download_update(self, url):
+    try:
+        print(f"Attempting to download from: {url}")  # Debug print
+        response = requests.get(url)
+        print(f"Response status code: {response.status_code}")  # Debug print
+        if response.status_code == 200:
+            with open("main.py", "w", encoding='utf-8') as f:
+                f.write(response.text)
+            messagebox.showinfo("Success", "Update downloaded! Please restart the application.")
+            self.root.quit()
+        else:
+            print(f"Failed with status code: {response.status_code}")  # Debug print
+            messagebox.showerror("Error", f"Failed to download update: Status {response.status_code}")
+    except Exception as e:
+        print(f"Exception occurred: {str(e)}")  # Debug print
+        messagebox.showerror("Error", f"Failed to download update: {str(e)}")
 
     def run(self):
         self.root.mainloop()
